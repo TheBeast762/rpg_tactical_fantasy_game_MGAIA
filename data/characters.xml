@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <characters>
     <jist>
         <name> jist </name>
@@ -47,12 +46,11 @@
             </feet>
         </equipment>
         <inventory>
-                <item>
-                    life_potion
-                </item>
-                <item>
+
+            <item>hyper_life_potion</item>
+            <item>
                     key
-                </item>
+            </item>
         </inventory>
         <gold> 250 </gold>
         <strategy> ACTIVE </strategy>
@@ -83,9 +81,9 @@
             </feet>
         </equipment>
         <inventory>
-                <item>
+            <item>
                     life_potion
-                </item>
+            </item>
         </inventory>
         <gold> 250 </gold>
         <strategy> ACTIVE </strategy>
@@ -100,7 +98,7 @@
         <resistance> 0 </resistance>
         <hp> 20 </hp>
         <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
-       <equipment>
+        <equipment>
             <head>
                 horned_helmet
             </head>
@@ -176,12 +174,12 @@
             </feet>
         </equipment>
         <inventory>
-                <item>
+            <item>
                     life_potion
-                </item>
-                <item>
+            </item>
+            <item>
                     door_key
-                </item>
+            </item>
         </inventory>
         <gold> 100 </gold>
         <strategy> ACTIVE </strategy>

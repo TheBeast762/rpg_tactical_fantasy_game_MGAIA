@@ -315,9 +315,13 @@ def getFreeArea(obstacles, nTiles, width, height):
 	return []
 
 #Get list of available characters from XML sheet
+#	difficulty:	Normalized difficulty parameter to base PCG on
 #returns: list of character names
-def getCharacters(path):
-	tree = ET.parse(path).getroot() #read in the XML
+def getCharacters(difficulty, foes=False):
+	dir = 'characters'
+	if foes:
+		dir = 'foes'
+	tree = ET.parse(CUR_DIR + '/data/' + dir + '/base.xml').getroot() #read in the XML
 	return [elem.tag for elem in tree]
 
 #creates level image file given imageTiles
@@ -332,6 +336,44 @@ def writeLevel(imageTiles, levelPath):
 			new_level.paste(imageTiles[x][y], (x*TILE_SIZE,y*TILE_SIZE))
 	new_level.save(levelPath)
 
+#Places potions in inventory of protagonists based on difficulty
+#	difficulty:	Normalized difficulty to base PCG on
+def placePotion(difficulty: float):
+    potion_list = ['life_potion', 'super_life_potion', 'hyper_life_potion', 'ultra_life_potion']
+    lvl_000_weights = [0.5, 0.3, 0.15, 0.05]
+    lvl_025_weights = [0.2, 0.5, 0.2, 0.1]
+    lvl_050_weights = [0.2, 0.2, 0.4, 0.2]
+    lvl_075_weights = [0.05, 0.15, 0.5, 0.3]
+    item = None
+    if difficulty >= 0.0:
+        item = np.random.choice(potion_list, p=lvl_000_weights)
+    if difficulty >= 0.25:
+        item = np.random.choice(potion_list, p=lvl_025_weights)
+    if difficulty >= 0.5:
+        item = np.random.choice(potion_list, p=lvl_050_weights)
+    if difficulty >= 0.75:
+        item = np.random.choice(potion_list, p=lvl_075_weights)
+    tree = ET.parse(CUR_DIR + '/data/characters/level_' + str(difficulty).replace('.', '_') + '.xml')
+    tree.find('.//inventory/item').text = item
+    tree.write(path)
+
+#Receives single character xml subelement and mutates it based on difficulty parameter
+#	character:	xml subelement of character
+#	difficulty:	Normalized difficulty PCG parameter
+def mutateCharacter(character, difficulty):
+
+
+#Receives all characters xml tree, creates subset and mutates based on difficulty and writes to xml file
+#	dataTree:	xml subtree of all relevant characters
+#	difficulty:	Normalized difficulty parameter PCG
+#returns: list of character names for level
+def subsetCharacters(difficulty, foes=False):
+	characs = []
+	if foes:
+		tree = ET.parse(CUR_DIR + '/data/foes/base.xml').getroot() #read in the XML
+	else:
+		tree = ET.parse(CUR_DIR + '/data/characters/base.xml').getroot() #read in the XML
+
 #creates XML file to read level image
 #	difficulty:	Normalized difficulty to base PCG on
 #	levelMap:	2d image array of grass floor
@@ -343,8 +385,8 @@ def writeXML(difficulty, obstacles, levelMap, dims, level, experiment=False):
 	nFoes = 1
 	filePath = LEVEL_DIR+"level_"+str(level)+"/data.xml"
 	document = ET.Element('level')
-	characters = getCharacters(CHARAC_SHEET)
-	foeCharacs = getCharacters(FOES_SHEET)
+	characters = getCharacters(difficulty)
+	foeCharacs = getCharacters(difficulty, foes=True)
 	et = ET.ElementTree(document)
 	ET.SubElement(document, 'width').text = str(dims[0])
 	ET.SubElement(document, 'height').text = str(dims[1])

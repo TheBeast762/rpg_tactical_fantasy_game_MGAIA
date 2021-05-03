@@ -90,7 +90,7 @@
                     potion/ruby_new.bmp
                 </sprite>
                 <info>
-                    Use it to recover some HP
+                    Use it to recover 10% HP
                 </info>
                 <category>
                     potion
@@ -110,6 +110,90 @@
                     150
                 </price>
             </life_potion>
+            <super_life_potion>
+                <name>
+                    Super Life Potion
+                </name>
+                <sprite>
+                    potion/orange_new.bmp
+                </sprite>
+                <info>
+                    Use it to recover 25% HP
+                </info>
+                <category>
+                    potion
+                </category>
+                <effect>
+                    <type>
+                        heal
+                    </type>
+                    <power>
+                        25
+                    </power>
+                    <duration>
+                        0
+                    </duration>
+                </effect>
+                <price>
+                    300
+                </price>
+            </super_life_potion>
+            <hyper_life_potion>
+                <name>
+                    Hyper Life Potion
+                </name>
+                <sprite>
+                    potion/magenta_new.bmp
+                </sprite>
+                <info>
+                    Use it to recover 50% HP
+                </info>
+                <category>
+                    potion
+                </category>
+                <effect>
+                    <type>
+                        heal
+                    </type>
+                    <power>
+                        50
+                    </power>
+                    <duration>
+                        0
+                    </duration>
+                </effect>
+                <price>
+                    500
+                </price>
+            </hyper_life_potion>
+            <ultra_life_potion>
+                <name>
+                    Ultra Life Potion
+                </name>
+                <sprite>
+                    potion/white_new.bmp
+                </sprite>
+                <info>
+                    Use it to recover 75% HP
+                </info>
+                <category>
+                    potion
+                </category>
+                <effect>
+                    <type>
+                        heal
+                    </type>
+                    <power>
+                        75
+                    </power>
+                    <duration>
+                        0
+                    </duration>
+                </effect>
+                <price>
+                    600
+                </price>
+            </ultra_life_potion>
             <speed_potion>
                 <name>
                     Speed Potion

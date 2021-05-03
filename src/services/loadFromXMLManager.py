@@ -205,7 +205,7 @@ def load_artificial_entity(entity, infos, from_save, gap_x, gap_y, extension_pat
 def load_ally(ally, from_save, gap_x, gap_y):
     name = ally.find('name').text.strip()
     print("LOADING ", name)
-    infos = etree.parse('data/characters.xml').find(name)
+    infos = etree.parse('data/characters/level' + str(get_difficulty()).replace('.','_') + '.xml').find(name)
     entity_attributes = load_artificial_entity(ally, infos, from_save, gap_x, gap_y)
 
     # Static data character
@@ -625,7 +625,7 @@ def load_player(el, from_save):
                   for skill in el.findall('skills/skill/name')]
         for alteration in el.findall('alterations/alteration'):
             alterations.append(load_alteration(alteration))
-        tree = etree.parse("data/characters.xml").getroot()
+        tree = etree.parse("data/characters/level_" + str(get_difficulty()).replace('.','_') + '.xml').getroot()
         player_t = tree.xpath(name)[0]
     else:
         skills = Character.classes_data[p_class]['skills'] + Character.races_data[race]['skills']
@@ -681,7 +681,7 @@ def load_escaped_players(data):
 
 def init_player(name):
     # -- Reading of the XML file
-    tree = etree.parse("data/characters.xml").getroot()
+    tree = etree.parse("data/characters/level_" + str(get_difficulty()).replace('.','_') + '.xml').getroot()
     player_t = tree.xpath(name)[0]
     return load_player(player_t, False)
 
