@@ -4,11 +4,11 @@
         <name> novius </name>
         <class> ranger </class>
         <race> human </race>
-        <level> 1 </level>
-        <strength> 0 </strength>
-        <defense> 2 </defense>
-        <resistance> 0 </resistance>
-        <hp> 10 </hp>
+        <level> 0 </level>
+        <strength> 11 </strength>
+        <defense> 8 </defense>
+        <resistance> 9 </resistance>
+        <hp> 15 </hp>
         <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
@@ -34,8 +34,8 @@
         <class> spy </class>
         <race> human </race>
         <level> 0 </level>
-        <strength> 5 </strength>
-        <defense> 2 </defense>
+        <strength> 10 </strength>
+        <defense> 8 </defense>
         <resistance> 2 </resistance>
         <hp> 25 </hp>
         <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
@@ -64,15 +64,15 @@
         <class> innkeeper </class>
         <race> elf </race>
         <level> 0 </level>
-        <strength> 5 </strength>
-        <defense> 4 </defense>
+        <strength> 11 </strength>
+        <defense> 9 </defense>
         <resistance> 2 </resistance>
-        <hp> 15 </hp>
+        <hp> 17 </hp>
         <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
         <equipment>
             <right_hand>
-                short_sword
+                club
             </right_hand>
             <body>
                 leather_armor
@@ -91,20 +91,20 @@
         <class> warrior </class>
         <race> elf </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 2 </defense>
+        <strength> 18 </strength>
+        <defense> 8 </defense>
         <resistance> 5 </resistance>
-        <hp> 30 </hp>
+        <hp> 28 </hp>
         <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
         <equipment>
             <head>
                 plumed_helmet
             </head>
             <right_hand>
-                short_sword
+                club
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 brown_boots
@@ -120,20 +120,20 @@
         <class> spy </class>
         <race> elf </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 2 </defense>
+        <strength> 11 </strength>
+        <defense> 11 </defense>
         <resistance> 5 </resistance>
-        <hp> 30 </hp>
+        <hp> 28 </hp>
         <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
                 black_hood
             </head>
             <right_hand>
-                leather_armor
+                dagger
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 black_boots
@@ -149,10 +149,10 @@
         <class> innkeeper </class>
         <race> dwarf </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 4 </defense>
+        <strength> 12 </strength>
+        <defense> 11 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 25 </hp>
         <sprite> dungeon_crawl/player/base/dwarf_female.bmp </sprite>
        <equipment>
             <head>
@@ -162,7 +162,7 @@
                 pickaxe
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 brown_boots
@@ -178,10 +178,10 @@
         <class> ranger </class>
         <race> dwarf </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 4 </defense>
+        <strength> 13 </strength>
+        <defense> 9 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 25 </hp>
         <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
        <equipment>
             <head>
@@ -191,7 +191,7 @@
                 basic_bow
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 brown_boots
@@ -207,10 +207,10 @@
         <class> spy </class>
         <race> dwarf </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 4 </defense>
+        <strength> 11 </strength>
+        <defense> 9 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 23 </hp>
         <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
        <equipment>
             <head>
@@ -220,7 +220,7 @@
                 dagger
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 black_boots
@@ -236,17 +236,17 @@
         <class> innkeeper </class>
         <race> centaur </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 3 </defense>
+        <strength> 13 </strength>
+        <defense> 11 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 20 </hp>
         <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
         <equipment>
             <head>
                 helmet
             </head>
             <body>
-                jacket_2
+                leather_armor
             </body>
             <right_hand>
                 pickaxe
@@ -262,17 +262,17 @@
         <class> ranger </class>
         <race> centaur </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 3 </defense>
+        <strength> 11</strength>
+        <defense> 10 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 24 </hp>
         <sprite> dungeon_crawl/player/base/centaur_brown_female.bmp </sprite>
         <equipment>
             <head>
                 helmet
             </head>
             <body>
-                jacket_2
+                leather_armor
             </body>
             <right_hand>
                 basic_bow
@@ -288,17 +288,17 @@
         <class> spy </class>
         <race> centaur </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 3 </defense>
+        <strength> 9 </strength>
+        <defense> 10 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 26 </hp>
         <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
         <equipment>
             <head>
                 black_hood
             </head>
             <body>
-                shirt_black
+                leather_armor
             </body>
             <right_hand>
                 dagger
@@ -313,18 +313,18 @@
         <name> emera </name>
         <class> innkeeper </class>
         <race> gnome </race>
-        <strength> 10 </strength>
-        <defense> 7 </defense>
+        <strength> 11 </strength>
+        <defense> 8 </defense>
         <resistance> 3 </resistance>
         <hp> 22 </hp>
         <level> 0 </level>
         <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
         <equipment>
             <body>
-                shirt_blue
+                leather_armor
             </body>
             <right_hand>
-                short_sword
+                halberd
             </right_hand>
             <feet>
                 black_boots
@@ -339,21 +339,21 @@
         <name> krado </name>
         <class> warrior </class>
         <race> gnome </race>
-        <strength> 10 </strength>
-        <defense> 7 </defense>
+        <strength> 12 </strength>
+        <defense> 9 </defense>
         <resistance> 3 </resistance>
-        <hp> 22 </hp>
+        <hp> 23 </hp>
         <level> 0 </level>
         <sprite> dungeon_crawl/player/base/gnome_male.bmp </sprite>
         <equipment>
             <head>
-                chain
+                helmet
             </head>
             <body>
-                plate
+                leather_armor
             </body>
             <right_hand>
-                aragorn
+                halberd
             </right_hand>
             <feet>
                 black_boots
@@ -368,8 +368,8 @@
         <name> roama </name>
         <class> ranger </class>
         <race> gnome </race>
-        <strength> 10 </strength>
-        <defense> 7 </defense>
+        <strength> 12 </strength>
+        <defense> 11 </defense>
         <resistance> 3 </resistance>
         <hp> 22 </hp>
         <level> 0 </level>
@@ -398,11 +398,19 @@
         <class> innkeeper </class>
         <race> human </race>
         <level> 0 </level>
-        <strength> 5 </strength>
-        <defense> 4 </defense>
+        <strength> 11 </strength>
+        <defense> 9 </defense>
         <resistance> 2 </resistance>
-        <hp> 15 </hp>
+        <hp> 18 </hp>
         <sprite> characs/jist.bmp </sprite>
+        <equipment>
+            <head>
+                helmet
+            </head>
+            <right_hand>
+                club
+            </right_hand>
+        </equipment>
         <interaction>
             <talk>
                 Hurry up ! Leave the village from the west, and enter the necropolis.
@@ -422,20 +430,20 @@
         <class> warrior </class>
         <race> human </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 2 </defense>
+        <strength> 13 </strength>
+        <defense> 9 </defense>
         <resistance> 5 </resistance>
-        <hp> 30 </hp>
+        <hp> 28 </hp>
         <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
                 helmet
             </head>
             <right_hand>
-                club
+                halberd
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 brown_boots
@@ -451,8 +459,8 @@
         <class> ranger </class>
         <race> elf </race>
         <level> 0 </level>
-        <strength> 5 </strength>
-        <defense> 2 </defense>
+        <strength> 9 </strength>
+        <defense> 10 </defense>
         <resistance> 2 </resistance>
         <hp> 25 </hp>
         <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
@@ -481,8 +489,8 @@
         <class> warrior </class>
         <race> dwarf </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 4 </defense>
+        <strength> 13 </strength>
+        <defense> 9 </defense>
         <resistance> 2 </resistance>
         <hp> 30 </hp>
         <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
@@ -494,7 +502,7 @@
                 pickaxe
             </right_hand>
             <body>
-                chainmail
+                leather_armor
             </body>
             <feet>
                 brown_boots
@@ -510,17 +518,17 @@
         <class> warrior </class>
         <race> centaur </race>
         <level> 0 </level>
-        <strength> 10 </strength>
-        <defense> 3 </defense>
+        <strength> 12 </strength>
+        <defense> 10 </defense>
         <resistance> 2 </resistance>
-        <hp> 30 </hp>
+        <hp> 22 </hp>
         <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
         <equipment>
             <body>
                 barding_magenta
             </body>
             <right_hand>
-                short_sword
+                club
             </right_hand>
         </equipment>
         <inventory>
@@ -533,7 +541,7 @@
         <class> spy </class>
         <race> gnome </race>
         <strength> 10 </strength>
-        <defense> 7 </defense>
+        <defense> 9 </defense>
         <resistance> 3 </resistance>
         <hp> 22 </hp>
         <level> 0 </level>

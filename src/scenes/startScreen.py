@@ -1,5 +1,5 @@
 from lxml import etree
-from mapPCG import generateMaps
+from PCG import generateMaps
 from src.services import menuCreatorManager
 from src.constants import *
 from src.gui.fonts import fonts
@@ -8,7 +8,7 @@ from src.gui.infoBox import InfoBox
 from src.game_entities.movable import Movable
 from src.services.menus import StartMenu, OptionsMenu, GenericActions, LoadMenu
 
-N_LEVELS = {0.0: 1, 0.25: 2, 0.5: 3, 0.75: 4}
+N_LEVELS = {0.0: 1, 0.25: 2, 0.55: 3, 0.7: 4} 
 
 class StartScreen:
     screen_size = SCREEN_SIZE
@@ -89,10 +89,6 @@ class StartScreen:
                 self.play(StartScreen.load_level(self.level_id, team, self.experiment))
             elif status is LevelStatus.ENDED_VICTORY or status is LevelStatus.ENDED_DEFEAT:
                 # TODO: Game win dialog?
-                if status == LevelStatus.ENDED_DEFEAT:
-                    print("Game ended in Defeat...")
-                else:
-                    print("Game ended in Victory!")
                 self.screen = pg.display.set_mode((MAIN_WIN_WIDTH, MAIN_WIN_HEIGHT))
                 self.level = None
 

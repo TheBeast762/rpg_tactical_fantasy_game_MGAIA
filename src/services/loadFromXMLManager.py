@@ -69,7 +69,7 @@ def load_stat_up(el, stat_name):
 def get_difficulty():
     tree = etree.parse('saves/options.xml').getroot()
     try:
-        return float(tree.findall("difficulty")[0].text)
+        return round(float(tree.findall("difficulty")[0].text), 1)
     except:
         print("No difficulty found in the options.xml file!")
 
@@ -171,7 +171,6 @@ def load_entities(ent_nature, data, from_save, gap_x, gap_y):
 
 def load_artificial_entity(entity, infos, from_save, gap_x, gap_y, extension_path=''):
     name = entity.find('name').text.strip()
-
     # Static data
     sprite = 'imgs/' + extension_path + infos.find('sprite').text.strip()
     strategy = infos.find('strategy').text.strip()
@@ -204,8 +203,7 @@ def load_artificial_entity(entity, infos, from_save, gap_x, gap_y, extension_pat
 
 def load_ally(ally, from_save, gap_x, gap_y):
     name = ally.find('name').text.strip()
-    print("LOADING ", name)
-    infos = etree.parse('data/characters/level' + str(get_difficulty()).replace('.','_') + '.xml').find(name)
+    infos = etree.parse('data/characters/level_' + str(get_difficulty()).replace('.','_') + '.xml').find(name)
     entity_attributes = load_artificial_entity(ally, infos, from_save, gap_x, gap_y)
 
     # Static data character
@@ -270,7 +268,7 @@ def load_ally(ally, from_save, gap_x, gap_y):
 def load_foe(foe, from_save, gap_x, gap_y):
     name = foe.find('name').text.strip()
     if name not in foes_infos:
-        foes_infos[name] = etree.parse('data/foes.xml').find(name)
+        foes_infos[name] = etree.parse('data/foes/level_'+ str(get_difficulty()).replace('.','_') +'.xml').find(name)
         # Load grow rates of this kind of foe in the class
         Foe.grow_rates[name] = load_stats_up(foes_infos[name])
 
@@ -682,7 +680,7 @@ def load_escaped_players(data):
 def init_player(name):
     # -- Reading of the XML file
     tree = etree.parse("data/characters/level_" + str(get_difficulty()).replace('.','_') + '.xml').getroot()
-    player_t = tree.xpath(name)[0]
+    player_t = tree.find(name)
     return load_player(player_t, False)
 
 
@@ -705,7 +703,6 @@ def load_weapon_effect(eff):
 
 def load_item(data):
     name = data.find("name").text.strip()
-    print("LOADING EQUIPMENT: ", name)
     # Retrieve static data
     item = parse_item_file(name)
     item.resell_price = int(data.find('value').text.strip())

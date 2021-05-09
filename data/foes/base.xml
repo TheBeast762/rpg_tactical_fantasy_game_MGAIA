@@ -1,27 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <foes>
   <mutant_bee>
+    <name>mutant_bee</name>
     <sprite>
             undead/simulacra/simulacrum_bee.bmp
         </sprite>
     <move>
-            5
+            6
         </move>
     <hp>
-            2
+            18
         </hp>
     <strength>
-            1
+            16
         </strength>
     <defense>
-            0
+            11
         </defense>
     <resistance>
-            0
+            2
         </resistance>
     <xp_gain>3</xp_gain>
     <strategy>
-            SEMI_ACTIVE
+            ACTIVE
         </strategy>
     <reach>
             1, 2
@@ -47,19 +48,20 @@
     <keywords>mutant,fly</keywords>
   </mutant_bee>
   <mutant_ant>
+    <name>mutant_ant</name>
     <sprite>
             undead/simulacra/simulacrum_ant.bmp
         </sprite>
     <move>
-            4
+            7
         </move>
-    <hp>2</hp>
-    <strength>1</strength>
-    <defense>0</defense>
-    <resistance>0</resistance>
+    <hp>21</hp>
+    <strength>16</strength>
+    <defense>11</defense>
+    <resistance>3</resistance>
     <xp_gain>3</xp_gain>
     <strategy>
-            SEMI_ACTIVE
+            ACTIVE
         </strategy>
     <attack_kind>
             PHYSICAL
@@ -82,16 +84,17 @@
     <keywords>mutant</keywords>
   </mutant_ant>
   <mutant_lizard>
+    <name>mutant_lizard</name>
     <sprite>
             undead/simulacra/simulacrum_lizard.bmp
         </sprite>
     <move>
             6
         </move>
-    <hp>2</hp>
-    <strength>2</strength>
-    <defense>0</defense>
-    <resistance>0</resistance>
+    <hp>24</hp>
+    <strength>16</strength>
+    <defense>12</defense>
+    <resistance>3</resistance>
     <xp_gain>3</xp_gain>
     <strategy>
             ACTIVE
@@ -117,16 +120,17 @@
     <keywords>mutant,large,cavalry</keywords>
   </mutant_lizard>
   <snake>
+    <name>snake</name>
     <sprite>
             animals/adder.bmp
         </sprite>
     <move>
-            2
+            3
         </move>
-    <hp>1</hp>
-    <strength>1</strength>
-    <defense>0</defense>
-    <resistance>0</resistance>
+    <hp>20</hp>
+    <strength>17</strength>
+    <defense>11</defense>
+    <resistance>3</resistance>
     <xp_gain>2</xp_gain>
     <strategy>
             SEMI_ACTIVE
@@ -151,19 +155,20 @@
     <loot></loot>
   </snake>
   <skeleton>
+    <name>skeleton</name>
     <sprite>
             undead/skeletons/skeleton_humanoid_small_old.bmp
         </sprite>
     <move>
             3
         </move>
-    <hp>2</hp>
-    <strength>1</strength>
+    <hp>22</hp>
+    <strength>17</strength>
     <defense>
-            0
+            10
         </defense>
     <resistance>
-            0
+            3
         </resistance>
     <xp_gain>2</xp_gain>
     <strategy>
@@ -207,19 +212,20 @@
     <keywords>UNDEAD</keywords>
   </skeleton>
   <simple_statue>
+    <name>simple_statue</name>
     <sprite>
             statues/statue_base_old.bmp
         </sprite>
     <move>
             0
         </move>
-    <hp>2</hp>
+    <hp>17</hp>
     <strength>
-            1
+            17
         </strength>
-    <defense>0</defense>
+    <defense>13</defense>
     <resistance>
-            0
+            1
         </resistance>
     <xp_gain>2</xp_gain>
     <strategy>
@@ -244,19 +250,20 @@
     </stats_up>
   </simple_statue>
   <necrophage>
+    <name>necrophage</name>
     <sprite>
             undead/necrophage_new.bmp
         </sprite>
     <move>
             2
         </move>
-    <hp>3</hp>
-    <strength>2</strength>
+    <hp>22</hp>
+    <strength>18</strength>
     <defense>
-            0
+            12
         </defense>
     <resistance>
-            0
+            3
         </resistance>
     <xp_gain>3</xp_gain>
     <strategy>
@@ -300,21 +307,22 @@
     <keywords>UNDEAD,LARGE</keywords>
   </necrophage>
   <fire_eye>
+    <name>fire_eye</name>
     <sprite>
             eyes/eye_of_devastation_old.bmp
         </sprite>
     <move>
             5
         </move>
-    <hp>1</hp>
+    <hp>17</hp>
     <strength>
-            1
+            19
         </strength>
     <defense>
-            0
+            13
         </defense>
     <resistance>
-            0
+            4
         </resistance>
     <xp_gain>1</xp_gain>
     <attack_kind>
@@ -339,18 +347,19 @@
     </stats_up>
   </fire_eye>
   <cultist>
+    <name>cultist</name>
     <sprite>
             thugs/cultist.bmp
         </sprite>
     <move>
             3
         </move>
-    <hp>3</hp>
-    <strength>1</strength>
+    <hp>16</hp>
+    <strength>15</strength>
     <defense>
-            0
+            11
         </defense>
-    <resistance>0</resistance>
+    <resistance>4</resistance>
     <xp_gain>3</xp_gain>
     <strategy>
             ACTIVE
@@ -387,19 +396,20 @@
     </stats_up>
   </cultist>
   <mutanter_cultist>
+    <name>mutanter_cultist</name>
     <sprite>
             thugs/mutanter_cultist.bmp
         </sprite>
     <move>
             3
         </move>
-    <hp>4</hp>
-    <strength>2</strength>
-    <defense>0</defense>
-    <resistance>1</resistance>
+    <hp>19</hp>
+    <strength>15</strength>
+    <defense>9</defense>
+    <resistance>4</resistance>
     <xp_gain>14</xp_gain>
     <strategy>
-            STATIC
+            ACTIVE
         </strategy>
     <reach>
             2, 3
@@ -429,17 +439,18 @@
     </stats_up>
   </mutanter_cultist>
   <assassin>
+    <name>assassin</name>
     <sprite>
             thugs/basic_assassin.bmp
         </sprite>
     <move>
             4
         </move>
-    <hp>3</hp>
-    <strength>2</strength>
-    <defense>0</defense>
+    <hp>24</hp>
+    <strength>13</strength>
+    <defense>10</defense>
     <resistance>
-            0
+            5
         </resistance>
     <xp_gain>3</xp_gain>
     <strategy>
@@ -478,18 +489,19 @@
     </stats_up>
   </assassin>
   <skeleton_cobra>
+    <name>skeleton_cobra</name>
     <sprite>
             undead/skeletons/skeleton_snake.bmp
         </sprite>
     <move>
             4
         </move>
-    <hp>2</hp>
-    <strength>1</strength>
+    <hp>26</hp>
+    <strength>16</strength>
     <defense>
-            0
+            12
         </defense>
-    <resistance>0</resistance>
+    <resistance>4</resistance>
     <xp_gain>3</xp_gain>
     <strategy>
             SEMI_ACTIVE
@@ -527,16 +539,17 @@
     <keywords>cavalry</keywords>
   </skeleton_cobra>
   <lich_boss>
+    <name>lich_boss</name>
     <sprite>
             undead/ancient_lich_new.bmp
         </sprite>
     <move>
             2
         </move>
-    <hp>4</hp>
-    <strength>2</strength>
-    <defense>1</defense>
-    <resistance>1</resistance>
+    <hp>30</hp>
+    <strength>15</strength>
+    <defense>11</defense>
+    <resistance>6</resistance>
     <xp_gain>12</xp_gain>
     <strategy>
             SEMI_ACTIVE

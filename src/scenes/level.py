@@ -103,8 +103,6 @@ class Level:
                     if self.get_entity_on_case(tile) is None:
                         player.set_initial_pos(tile)
                         break
-                else:
-                    print("Error ! Not enough free tiles to set players...")
         else:
             # Game is loaded from a save (data)
             from_save = True
@@ -322,18 +320,27 @@ class Level:
         for tile in self.possible_placements:
             blit_alpha(win, constant_sprites['landing'], tile, LANDING_OPACITY)
 
+    def getStats(self, ent):
+        stats = 0.0
+        for char in self.entities[ent]:
+            stats += char.defense + char.res + char.strength + char.hp_max
+        return stats
 
     def getMeanDistToFoes(self):
-        distList = []
+        distList = []#
         nFoes = len(self.entities['foes'])
-        area = self.map['x']*self.map['y']
-        for player in self.entities['players']:
-            distList.append(sum(list(self.distance_between_all(player, self.entities['foes']).values()))/nFoes)
-        return sum(distList)/len(distList)
+        area = (self.map['width']/TILE_SIZE) * (self.map['height']/TILE_SIZE)
+        for player in self.entities['allies']:
+            dist = sum(list(self.distance_between_all(player, self.entities['foes']).values()))/nFoes
+            if dist < area:
+                distList.append(dist)
+        if distList:
+            return sum(distList)/len(distList)
+        else:
+            return area
 
     def start_game(self):
         self.active_menu = None
-        print(self.getMeanDistToFoes())
         self.game_phase = LevelStatus.IN_PROGRESS
         self.new_turn()
         if 'after_init' in self.events:

@@ -24,8 +24,9 @@ WATER_DIR = CUR_DIR+"/imgs/dungeon_crawl/dungeon/water/"
 DUNGEON_DIR = CUR_DIR+"/imgs/dungeon_crawl/dungeon/"
 MONSTER_DIR = CUR_DIR+"/imgs/dungeon_crawl/monster/"
 MISC_DIR = CUR_DIR+"/imgs/dungeon_crawl/misc/"
-N_LEVELS = {0.0: 1, 0.25: 2, 0.5: 3, 0.75: 4}
+N_LEVELS = {0.0: 1, 0.25: 2, 0.55: 3, 0.7: 4}
 THEMES = {0: ["frozen_lake", "beach", "field"], 1: ["hell", "forest", "autumn"], 2: ["cave", "temple", "city"], 3: ["volcano", "village", "graveyard"]}
+MUTATE_DICT = {0.1: 1.25, 0.2: 1.2, 0.3: 1.15, 0.4: 1.1, 0.5: 1.05, 0.6: 1.0, 0.7: 0.95, 0.8: 0.9, 0.9: 0.85, 1.0: 0.8}
 
 #Combines two images into one
 #	front:	Front layer image
@@ -291,7 +292,7 @@ def getDifficulty():
 #	nTiles:			Amount of tiles to place
 #	width,height:	Dimensions of level
 #returns: list of location tuples
-def getFreeArea(obstacles, nTiles, width, height):
+def getFreeArea(obstacles, nTiles, width, height, walkable=True):
 	areaSize = int(nTiles) if (nTiles % 2) == 0 else int(nTiles+1)
 	while True:
 		area = []
@@ -310,7 +311,8 @@ def getFreeArea(obstacles, nTiles, width, height):
 			area.extend([(x_loc,y_loc), (x_loc,y_loc+1)])
 			x_loc = x_loc+1
 			if count >= areaSize:
-				obstacles.extend(area)
+				if not walkable:
+					obstacles.extend(area)
 				return area
 	return []
 
@@ -336,57 +338,110 @@ def writeLevel(imageTiles, levelPath):
 			new_level.paste(imageTiles[x][y], (x*TILE_SIZE,y*TILE_SIZE))
 	new_level.save(levelPath)
 
-#Places potions in inventory of protagonists based on difficulty
-#	difficulty:	Normalized difficulty to base PCG on
-def placePotion(difficulty: float):
-    potion_list = ['life_potion', 'super_life_potion', 'hyper_life_potion', 'ultra_life_potion']
-    lvl_000_weights = [0.5, 0.3, 0.15, 0.05]
-    lvl_025_weights = [0.2, 0.5, 0.2, 0.1]
-    lvl_050_weights = [0.2, 0.2, 0.4, 0.2]
-    lvl_075_weights = [0.05, 0.15, 0.5, 0.3]
-    item = None
-    if difficulty >= 0.0:
-        item = np.random.choice(potion_list, p=lvl_000_weights)
-    if difficulty >= 0.25:
-        item = np.random.choice(potion_list, p=lvl_025_weights)
-    if difficulty >= 0.5:
-        item = np.random.choice(potion_list, p=lvl_050_weights)
-    if difficulty >= 0.75:
-        item = np.random.choice(potion_list, p=lvl_075_weights)
-    tree = ET.parse(CUR_DIR + '/data/characters/level_' + str(difficulty).replace('.', '_') + '.xml')
-    tree.find('.//inventory/item').text = item
-    tree.write(path)
-
 #Receives single character xml subelement and mutates it based on difficulty parameter
 #	character:	xml subelement of character
+#	stat_points:Respective stat_points for character
 #	difficulty:	Normalized difficulty PCG parameter
-def mutateCharacter(character, difficulty):
-
+#returns: Mutated character stat points
+def mutateCharacter(character, difficulty, foes=False):
+	if foes:
+		multiplier = MUTATE_DICT[round(1.1-difficulty, 1)]
+	else:
+		multiplier = MUTATE_DICT[difficulty]
+	strength = int(character.find('strength').text)
+	defense = int(character.find('defense').text)
+	hp = int(character.find('hp').text)
+	resistance = int(character.find('resistance').text)
+	if multiplier >= 1.0:
+		character.find('strength').text = str(random.randint(strength, int(strength*multiplier)))
+		character.find('hp').text = str(random.randint(hp, int(hp*multiplier)))
+		character.find('resistance').text = str(random.randint(resistance, int(resistance*multiplier)))
+		character.find('defense').text = str(random.randint(defense, int(defense*multiplier)))
+	else:
+		character.find('strength').text = str(random.randint(int(strength*multiplier), strength))
+		character.find('hp').text = str(random.randint(int(hp*multiplier), hp))
+		character.find('resistance').text = str(random.randint(int(resistance*multiplier), resistance))
+		character.find('defense').text = str(random.randint(int(defense*multiplier), defense))
+	return (int(character.find('strength').text) + int(character.find('hp').text) + int(character.find('resistance').text) + int(character.find('defense').text))
 
 #Receives all characters xml tree, creates subset and mutates based on difficulty and writes to xml file
 #	dataTree:	xml subtree of all relevant characters
 #	difficulty:	Normalized difficulty parameter PCG
 #returns: list of character names for level
 def subsetCharacters(difficulty, foes=False):
-	characs = []
+	#read all XML characters
+	#heropoints_per_difficulty = {0.1: 240, 0.2: 230, 0.3: 220, 0.4: 210, 0.5: 200, 0.6: 195, 0.7: 190, 0.8: 185, 0.9: 180, 1.0: 175}
+	#heropoints_per_difficulty = {0.1: 210, 0.2: 205, 0.3: 200, 0.4: 195, 0.5: 190, 0.6: 185, 0.7: 180, 0.8: 175, 0.9: 170, 1.0: 165}
+	heropoints_per_difficulty = {0.1: 195, 0.2: 190, 0.3: 185, 0.4: 180, 0.5: 175, 0.6: 170, 0.7: 170, 0.8: 170, 0.9: 170, 1.0: 170}
+	#have:(0.59, 0.48) want:(0.4, 0.35)
+
+	#foepoints_per_difficulty = {0.1: 200, 0.2: 210, 0.3: 220, 0.4: 230, 0.5: 240, 0.6: 250, 0.7: 255, 0.8: 260, 0.9: 265, 1.0: 270}
+	#foepoints_per_difficulty = {0.1: 230, 0.2: 235, 0.3: 240, 0.4: 245, 0.5: 250, 0.6: 255, 0.7: 260, 0.8: 260, 0.9: 260, 1.0: 260}
+	foepoints_per_difficulty = {0.1: 245, 0.2: 250, 0.3: 255, 0.4: 260, 0.5: 265, 0.6: 265, 0.7: 265, 0.8: 280, 0.9: 285, 1.0: 290}
+
+
+	points_per_difficulty = {}
+	stat_points = {}
+	characs = {}
 	if foes:
+		outputFile = CUR_DIR + '/data/foes/level_' + str(difficulty).replace('.', '_') + '.xml'
 		tree = ET.parse(CUR_DIR + '/data/foes/base.xml').getroot() #read in the XML
+		document = ET.Element('foes')#root
+		points_per_difficulty = foepoints_per_difficulty.copy()
 	else:
+		outputFile = CUR_DIR + '/data/characters/level_' + str(difficulty).replace('.', '_') + '.xml'
 		tree = ET.parse(CUR_DIR + '/data/characters/base.xml').getroot() #read in the XML
+		document = ET.Element('characters')#root
+		points_per_difficulty = heropoints_per_difficulty.copy()
+	#create subset XML characters and mutate 
+	for char in tree:
+		stat_points[char.find('name').text] = sum([int(char.find(stat).text) for stat in ['strength', 'defense', 'resistance', 'hp']])
+		characs[char.find('name').text] = char
+
+	points = 0
+	subset = []
+	found = False
+	while not found:
+		subset = []
+		characs_copy = list(characs.keys())
+		random.shuffle(characs_copy)
+		for selected_char in characs_copy:
+			points += stat_points[selected_char]
+			subset.append(selected_char)
+			if points > points_per_difficulty[difficulty]:#too good a selection
+				points = 0
+				break
+			elif points+10 >= points_per_difficulty[difficulty]:
+				found = True
+				break
+
+	#mutate subset
+	stats = 0
+	for char in subset:
+		stats += mutateCharacter(characs[char], difficulty, foes=foes)
+		document.append(characs[char])
+	print(foes, stats)
+
+	#write mutated subset XML characters to file
+	f = BytesIO()
+	ET.ElementTree(document).write(f, encoding='utf-8', xml_declaration=True) 
+	with open(outputFile, "wb") as outfile:
+		outfile.write(f.getbuffer())
+	return subset
+	
 
 #creates XML file to read level image
 #	difficulty:	Normalized difficulty to base PCG on
+#	heroes:		List of protagonists
 #	levelMap:	2d image array of grass floor
 #	obstacles:	List of location tuples where obstacles reside
 #	dims:		Dimensions of level
 #	filePath:	Path to write XML file to
-def writeXML(difficulty, obstacles, levelMap, dims, level, experiment=False):
-	nAllies = 3
-	nFoes = 1
+def writeXML(difficulty, heroes, foes, obstacles, levelMap, dims, level, experiment=False):
+	nAllies = len(heroes)
 	filePath = LEVEL_DIR+"level_"+str(level)+"/data.xml"
 	document = ET.Element('level')
-	characters = getCharacters(difficulty)
-	foeCharacs = getCharacters(difficulty, foes=True)
+	nFoes = len(foes)
 	et = ET.ElementTree(document)
 	ET.SubElement(document, 'width').text = str(dims[0])
 	ET.SubElement(document, 'height').text = str(dims[1])
@@ -397,12 +452,12 @@ def writeXML(difficulty, obstacles, levelMap, dims, level, experiment=False):
 		ET.SubElement(position, 'x').text = str(loc[0])
 		ET.SubElement(position, 'y').text = str(loc[1])
 	events = ET.SubElement(document, 'events')
-	foes = ET.SubElement(document, 'foes')
-	for _ in range(nFoes):
-		foe = ET.SubElement(foes, 'foe')
-		ET.SubElement(foe, 'name').text = foeCharacs.pop()
+	foeElem = ET.SubElement(document, 'foes')
+	for i in range(nFoes):
+		foe = ET.SubElement(foeElem, 'foe')
+		ET.SubElement(foe, 'name').text = foes[i]
 		position = ET.SubElement(foe, 'position')
-		foePos = getFreeArea(obstacles, 1, dims[0], dims[1])[0]
+		foePos = getFreeArea(obstacles, 1, dims[0], dims[1], walkable=False)[0]
 		ET.SubElement(position, 'x').text = str(foePos[0])
 		ET.SubElement(position, 'y').text = str(foePos[1])
 		ET.SubElement(foe, 'level').text = '1'
@@ -410,16 +465,16 @@ def writeXML(difficulty, obstacles, levelMap, dims, level, experiment=False):
 	if level == 0 and not experiment:
 		for i in range(nAllies):
 			player = ET.SubElement(bef_init, 'new_player')
-			ET.SubElement(player, 'name').text = characters.pop()
+			ET.SubElement(player, 'name').text = heroes[i]
 			position = ET.SubElement(player, 'position')
 			pos = pArea[i]
 			ET.SubElement(position, 'x').text = str(pos[0])
 			ET.SubElement(position, 'y').text = str(pos[1])
-	elif level == 0:
+	elif experiment:
 		allies = ET.SubElement(document, 'allies')
 		for i in range(nAllies):
 			ally = ET.SubElement(allies, 'ally')
-			ET.SubElement(ally, 'name').text = characters[i]
+			ET.SubElement(ally, 'name').text = heroes[i]
 			position = ET.SubElement(ally, 'position')
 			pos = pArea[i]
 			ET.SubElement(position, 'x').text = str(pos[0])
@@ -454,7 +509,8 @@ def generateMaps(experimentGame):
 	nLevels = 0
 	deleteLevels()
 	difficulty = getDifficulty()
-
+	heroes = subsetCharacters(difficulty)
+	foes = subsetCharacters(difficulty, foes=True)
 	for diff in N_LEVELS.keys():
 		if difficulty >= diff:
 			nLevels = N_LEVELS[diff]
@@ -533,4 +589,4 @@ def generateMaps(experimentGame):
 		elif theme == "frozen_lake":
 			image = placeFloor("frozen", FLOOR_DIR, width, height)
 		writeLevel(image, LEVEL_DIR+"level_"+str(level)+"/map.bmp")
-		writeXML(difficulty, obstacles, image, (width, height), level, experimentGame)
+		writeXML(difficulty, heroes, foes, obstacles, image, (width, height), level, experimentGame)

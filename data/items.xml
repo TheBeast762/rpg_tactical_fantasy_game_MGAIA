@@ -531,7 +531,7 @@
                     weapon
                 </category>
                 <power>
-                    1
+                    2
                 </power>
                 <kind>
                     PHYSICAL
@@ -645,7 +645,7 @@
                     </bonus_granted>
                 </charge>
             </basic_spear>
-            <basic_halberd>
+            <halberd>
                 <name>
                     Halberd
                 </name>
@@ -689,7 +689,7 @@
                         cavalry
                     </keywords>
                 </strong_against>
-            </basic_halberd>
+            </halberd>
             <pickaxe>
                 <name>
                     Pickaxe

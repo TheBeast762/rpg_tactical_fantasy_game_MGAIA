@@ -30,9 +30,6 @@ class Weapon(Equipment):
             distance_traveled = distance(holder.old_pos, holder.pos)
             if distance_traveled >= 5:
                 multiplier += 0.5 * ((distance_traveled - 2) // 3)
-        for keyword in target.keywords:
-            if keyword in self.strong_against:
-                multiplier += 1
         return int(multiplier * self.atk)
 
     def used(self):
