@@ -6,7 +6,7 @@
         <level> 0 </level>
         <strength>18</strength>
         <defense>7</defense>
-        <resistance>5</resistance>
+        <resistance>4</resistance>
         <hp>25</hp>
         <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
         <equipment>
@@ -28,52 +28,27 @@
         <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
     </lyka>
-    <nesterin>
-        <name> nesterin </name>
-        <class> spy </class>
-        <race> centaur </race>
+    <braern>
+        <name> braern </name>
+        <class> ranger </class>
+        <race> elf </race>
         <level> 0 </level>
-        <strength>8</strength>
+        <strength>9</strength>
         <defense>9</defense>
-        <resistance>2</resistance>
-        <hp>23</hp>
-        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
+        <resistance>1</resistance>
+        <hp>25</hp>
+        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
+        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
         <equipment>
             <head>
-                black_hood
+                plumed_helmet
             </head>
             <body>
                 leather_armor
             </body>
             <right_hand>
-                dagger
+                basic_bow
             </right_hand>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 100 </gold>
-        <strategy>ACTIVE</strategy>
-    </nesterin>
-    <raimund>
-        <name> raimund </name>
-        <class> warrior </class>
-        <race> human </race>
-        <level> 0 </level>
-        <strength>13</strength>
-        <defense>9</defense>
-        <resistance>4</resistance>
-        <hp>26</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
-        <equipment>
-            <head>
-                helmet
-            </head>
-            <right_hand>
-                halberd
-            </right_hand>
-            <body>
-                leather_armor
-            </body>
             <feet>
                 brown_boots
             </feet>
@@ -82,5 +57,34 @@
         </inventory>
         <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
-    </raimund>
+    </braern>
+    <euris>
+        <name> euris </name>
+        <class> spy </class>
+        <race> elf </race>
+        <level> 0 </level>
+        <strength>11</strength>
+        <defense>10</defense>
+        <resistance>4</resistance>
+        <hp>26</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <equipment>
+            <head>
+                black_hood
+            </head>
+            <right_hand>
+                dagger
+            </right_hand>
+            <body>
+                leather_armor
+            </body>
+            <feet>
+                black_boots
+            </feet>
+        </equipment>
+        <inventory>
+        </inventory>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </euris>
     </characters>

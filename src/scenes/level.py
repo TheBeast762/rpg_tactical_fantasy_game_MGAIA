@@ -600,13 +600,17 @@ class Level:
         collection = None
         if isinstance(entity, Foe):
             collection = self.entities['foes']
+            collection.remove(entity)
         elif isinstance(entity, Player):
             collection = self.entities['players']
+            self.passed_players.append(entity)
+            collection.remove(entity)
         elif isinstance(entity, Breakable):
             collection = self.entities['breakables']
+            collection.remove(entity)
         elif isinstance(entity, Character):
             collection = self.entities['allies']
-        collection.remove(entity)
+            collection.remove(entity)
 
     def duel(self, attacker, target, attacker_allies, target_allies, kind):
         nb_attacks = 2 if 'double_attack' in attacker.skills else 1

@@ -1,85 +1,86 @@
 <?xml version='1.0' encoding='utf-8'?>
-<foes><cultist>
-    <name>cultist</name>
+<foes><mutanter_cultist>
+    <name>mutanter_cultist</name>
     <sprite>
-            thugs/cultist.bmp
+            thugs/mutanter_cultist.bmp
         </sprite>
     <move>
             3
         </move>
-    <hp>14</hp>
+    <hp>19</hp>
     <strength>14</strength>
-    <defense>10</defense>
-    <resistance>4</resistance>
-    <xp_gain>3</xp_gain>
+    <defense>9</defense>
+    <resistance>3</resistance>
+    <xp_gain>14</xp_gain>
     <strategy>
             ACTIVE
         </strategy>
     <reach>
-            2
+            2, 3
         </reach>
     <attack_kind>
             SPIRITUAL
         </attack_kind>
     <loot>
       <item>
-        <name>
-                    wooden_staff
-                </name>
-        <probability>
-                    0.05
-                </probability>
+        <name>scroll_of_cerberus</name>
+        <probability>1.0</probability>
       </item>
     </loot>
     <stats_up>
       <hp>
-                2, 2, 2, 3, 3, 4
+                2, 3, 3, 4, 5
             </hp>
       <strength>
                 0, 1, 1, 2
             </strength>
       <defense>
-                0, 1
+                0, 1, 1, 2
             </defense>
       <resistance>
-                0, 1, 1, 2
+                1, 2, 2
             </resistance>
     </stats_up>
-  </cultist>
-  <fire_eye>
-    <name>fire_eye</name>
+  </mutanter_cultist>
+  <mutant_bee>
+    <name>mutant_bee</name>
     <sprite>
-            eyes/eye_of_devastation_old.bmp
+            undead/simulacra/simulacrum_bee.bmp
         </sprite>
     <move>
-            5
+            6
         </move>
-    <hp>15</hp>
-    <strength>19</strength>
-    <defense>13</defense>
-    <resistance>4</resistance>
-    <xp_gain>1</xp_gain>
+    <hp>18</hp>
+    <strength>14</strength>
+    <defense>11</defense>
+    <resistance>2</resistance>
+    <xp_gain>3</xp_gain>
+    <strategy>
+            ACTIVE
+        </strategy>
+    <reach>
+            1, 2
+        </reach>
     <attack_kind>
             PHYSICAL
         </attack_kind>
-    <strategy>
-            SEMI_ACTIVE
-        </strategy>
     <stats_up>
       <hp>
-                2, 2, 3, 3, 4, 5
+                1, 2, 2, 3
             </hp>
       <strength>
-                0, 1, 1, 2
+                0, 1, 1, 1
             </strength>
       <defense>
-                0, 1, 1
+                0, 1, 1, 2
             </defense>
       <resistance>
-                0, 1, 1
+                0, 0, 1
             </resistance>
     </stats_up>
-  </fire_eye>
+    <loot />
+    <keywords>mutant,fly</keywords>
+  </mutant_bee>
   <simple_statue>
     <name>simple_statue</name>
     <sprite>
@@ -88,8 +89,8 @@
     <move>
             0
         </move>
-    <hp>14</hp>
-    <strength>14</strength>
+    <hp>16</hp>
+    <strength>16</strength>
     <defense>13</defense>
     <resistance>1</resistance>
     <xp_gain>2</xp_gain>
@@ -122,7 +123,7 @@
     <move>
             3
         </move>
-    <hp>16</hp>
+    <hp>20</hp>
     <strength>15</strength>
     <defense>9</defense>
     <resistance>2</resistance>
@@ -149,31 +150,28 @@
     </stats_up>
     <loot />
   </snake>
-  <mutant_bee>
-    <name>mutant_bee</name>
+  <mutant_ant>
+    <name>mutant_ant</name>
     <sprite>
-            undead/simulacra/simulacrum_bee.bmp
+            undead/simulacra/simulacrum_ant.bmp
         </sprite>
     <move>
-            6
+            7
         </move>
     <hp>18</hp>
-    <strength>14</strength>
+    <strength>15</strength>
     <defense>9</defense>
-    <resistance>1</resistance>
+    <resistance>3</resistance>
     <xp_gain>3</xp_gain>
     <strategy>
             ACTIVE
         </strategy>
-    <reach>
-            1, 2
-        </reach>
     <attack_kind>
             PHYSICAL
         </attack_kind>
     <stats_up>
       <hp>
-                1, 2, 2, 3
+                1, 2, 2, 3, 3, 4
             </hp>
       <strength>
                 0, 1, 1, 1
@@ -186,6 +184,6 @@
             </resistance>
     </stats_up>
     <loot />
-    <keywords>mutant,fly</keywords>
-  </mutant_bee>
+    <keywords>mutant</keywords>
+  </mutant_ant>
   </foes>

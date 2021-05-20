@@ -26,7 +26,7 @@ MONSTER_DIR = CUR_DIR+"/imgs/dungeon_crawl/monster/"
 MISC_DIR = CUR_DIR+"/imgs/dungeon_crawl/misc/"
 N_LEVELS = {0.0: 1, 0.25: 2, 0.55: 3, 0.7: 4}
 THEMES = {0: ["frozen_lake", "beach", "field"], 1: ["hell", "forest", "autumn"], 2: ["cave", "temple", "city"], 3: ["volcano", "village", "graveyard"]}
-MUTATE_DICT = {0.1: 1.25, 0.2: 1.2, 0.3: 1.15, 0.4: 1.1, 0.5: 1.05, 0.6: 1.0, 0.7: 0.95, 0.8: 0.9, 0.9: 0.85, 1.0: 0.8}
+MUTATE_DICT = {0.1: 1.25, 0.2: 1.2, 0.3: 1.15, 0.4: 1.1, 0.5: 1.05, 0.6: 1.0, 0.7: 0.95, 0.8: 0.95, 0.9: 0.95, 1.0: 0.9}
 
 #Combines two images into one
 #	front:	Front layer image
@@ -462,7 +462,7 @@ def writeXML(difficulty, heroes, foes, obstacles, levelMap, dims, level, experim
 		ET.SubElement(position, 'y').text = str(foePos[1])
 		ET.SubElement(foe, 'level').text = '1'
 	bef_init = ET.SubElement(events, 'before_init')
-	if level == 0 and not experiment:
+	if not experiment:
 		for i in range(nAllies):
 			player = ET.SubElement(bef_init, 'new_player')
 			ET.SubElement(player, 'name').text = heroes[i]
@@ -515,7 +515,7 @@ def generateMaps(experimentGame):
 		if difficulty >= diff:
 			nLevels = N_LEVELS[diff]
 	for level in range(nLevels):
-		theme = random.choice(THEMES[level])
+		theme = 'city'#random.choice(THEMES[level])
 		obstacles = []
 		if theme == "autumn":
 			image, grassTexts, _ = placeGrassFloor(width, height, "grass0")

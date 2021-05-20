@@ -1,81 +1,56 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><braern>
-        <name> braern </name>
-        <class> ranger </class>
-        <race> elf </race>
-        <level> 0 </level>
-        <strength>10</strength>
-        <defense>10</defense>
-        <resistance>2</resistance>
-        <hp>30</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
-        <equipment>
-            <head>
-                plumed_helmet
-            </head>
-            <body>
-                leather_armor
-            </body>
-            <right_hand>
-                basic_bow
-            </right_hand>
-            <feet>
-                brown_boots
-            </feet>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 350 </gold>
-        <strategy>ACTIVE</strategy>
-    </braern>
-    <hallas>
-        <name> hallas </name>
+<characters><jist>
+        <name> jist </name>
         <class> innkeeper </class>
-        <race> centaur </race>
+        <race> human </race>
         <level> 0 </level>
-        <strength>14</strength>
-        <defense>12</defense>
+        <strength>12</strength>
+        <defense>9</defense>
         <resistance>2</resistance>
-        <hp>22</hp>
-        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
+        <hp>19</hp>
+        <sprite> characs/jist.bmp </sprite>
         <equipment>
             <head>
                 helmet
             </head>
-            <body>
-                leather_armor
-            </body>
             <right_hand>
-                pickaxe
+                club
             </right_hand>
         </equipment>
+        <interaction>
+            <talk>
+                Hurry up ! Leave the village from the west, and enter the necropolis.
+            </talk>
+            <talk>
+                The clock is ticking... The ogre's bones must be returned to their original place.
+            </talk>
+        </interaction>
         <inventory>
         </inventory>
-        <gold> 500 </gold>
-        <strategy>ACTIVE</strategy>
-    </hallas>
-    <samora>
-        <name> samora </name>
+        <gold> 220 </gold>
+        <strategy> ACTIVE </strategy>
+        <attack_kind> PHYSICAL </attack_kind>
+    </jist>
+    <kselia>
+        <name> kselia </name>
         <class> spy </class>
-        <race> human </race>
+        <race> dwarf </race>
         <level> 0 </level>
-        <strength>11</strength>
-        <defense>8</defense>
+        <strength>13</strength>
+        <defense>10</defense>
         <resistance>2</resistance>
-        <hp>26</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
-        <equipment>
+        <hp>25</hp>
+        <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
+       <equipment>
             <head>
                 black_hood
             </head>
-            <body>
-                spy_outfit
-            </body>
             <right_hand>
                 dagger
             </right_hand>
+            <body>
+                leather_armor
+            </body>
             <feet>
                 black_boots
             </feet>
@@ -84,26 +59,23 @@
         </inventory>
         <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
-    </samora>
-    <roama>
-        <name> roama </name>
-        <class> ranger </class>
+    </kselia>
+    <emera>
+        <name> emera </name>
+        <class> innkeeper </class>
         <race> gnome </race>
-        <strength>14</strength>
-        <defense>13</defense>
+        <strength>13</strength>
+        <defense>8</defense>
         <resistance>3</resistance>
-        <hp>25</hp>
+        <hp>24</hp>
         <level> 0 </level>
         <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
         <equipment>
-            <head>
-                plumed_helmet
-            </head>
             <body>
                 leather_armor
             </body>
             <right_hand>
-                basic_bow
+                halberd
             </right_hand>
             <feet>
                 black_boots
@@ -113,5 +85,34 @@
         </inventory>
         <gold> 200 </gold>
         <strategy>ACTIVE</strategy>
-    </roama>
+    </emera>
+    <raimund>
+        <name> raimund </name>
+        <class> warrior </class>
+        <race> human </race>
+        <level> 0 </level>
+        <strength>13</strength>
+        <defense>10</defense>
+        <resistance>5</resistance>
+        <hp>28</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <equipment>
+            <head>
+                helmet
+            </head>
+            <right_hand>
+                halberd
+            </right_hand>
+            <body>
+                leather_armor
+            </body>
+            <feet>
+                brown_boots
+            </feet>
+        </equipment>
+        <inventory>
+        </inventory>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </raimund>
     </characters>

@@ -1,51 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><emera>
-        <name> emera </name>
-        <class> innkeeper </class>
-        <race> gnome </race>
-        <strength>11</strength>
-        <defense>8</defense>
-        <resistance>3</resistance>
-        <hp>23</hp>
+<characters><raimund>
+        <name> raimund </name>
+        <class> warrior </class>
+        <race> human </race>
         <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
+        <strength>13</strength>
+        <defense>9</defense>
+        <resistance>5</resistance>
+        <hp>29</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
-            <body>
-                leather_armor
-            </body>
+            <head>
+                helmet
+            </head>
             <right_hand>
                 halberd
             </right_hand>
-            <feet>
-                black_boots
-            </feet>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 200 </gold>
-        <strategy>ACTIVE</strategy>
-    </emera>
-    <braern>
-        <name> braern </name>
-        <class> ranger </class>
-        <race> elf </race>
-        <level> 0 </level>
-        <strength>9</strength>
-        <defense>10</defense>
-        <resistance>2</resistance>
-        <hp>26</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
-        <equipment>
-            <head>
-                plumed_helmet
-            </head>
             <body>
                 leather_armor
             </body>
-            <right_hand>
-                basic_bow
-            </right_hand>
             <feet>
                 brown_boots
             </feet>
@@ -54,18 +27,18 @@
         </inventory>
         <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
-    </braern>
-    <kselia>
-        <name> kselia </name>
+    </raimund>
+    <euris>
+        <name> euris </name>
         <class> spy </class>
-        <race> dwarf </race>
+        <race> elf </race>
         <level> 0 </level>
         <strength>11</strength>
-        <defense>9</defense>
-        <resistance>2</resistance>
-        <hp>23</hp>
-        <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
-       <equipment>
+        <defense>11</defense>
+        <resistance>5</resistance>
+        <hp>29</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <equipment>
             <head>
                 black_hood
             </head>
@@ -83,19 +56,21 @@
         </inventory>
         <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
-    </kselia>
-    <ilyon>
-        <name> ilyon </name>
-        <class> innkeeper </class>
+    </euris>
+    <lyka>
+        <name> lyka </name>
+        <class> warrior </class>
         <race> elf </race>
         <level> 0 </level>
-        <strength>11</strength>
-        <defense>9</defense>
-        <resistance>2</resistance>
-        <hp>17</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
+        <strength>18</strength>
+        <defense>8</defense>
+        <resistance>5</resistance>
+        <hp>28</hp>
+        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
         <equipment>
+            <head>
+                plumed_helmet
+            </head>
             <right_hand>
                 club
             </right_hand>
@@ -106,9 +81,9 @@
                 brown_boots
             </feet>
         </equipment>
-        <gold> 220 </gold>
         <inventory>
         </inventory>
-        <strategy> ACTIVE </strategy>
-    </ilyon>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </lyka>
     </characters>

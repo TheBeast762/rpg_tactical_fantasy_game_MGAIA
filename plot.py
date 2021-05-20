@@ -14,7 +14,7 @@ def read_results(path):
 	return data
 
 def visualize():
-	results = read_results('results.json')
+	results = read_results('resultsUSER.json')
 	ind = np.arange(start=0.1, stop=1.1, step=0.1)
 	winRatio = [results[str(label)]['AvgWinRatio'] for label in labels]
 	heroStats = [results[str(label)]['AvgHeroStats'] for label in labels]
@@ -22,18 +22,18 @@ def visualize():
 
 	fig, ax1 = plt.subplots()
 	ax1.set_xticks(labels)
-	plt.scatter(labels, winRatio)
+	plt.scatter(labels, winRatio, color='seagreen')
 
 	ax1.set_xlabel('Difficulty')
-	ax1.set_ylabel('Normalized Win Ratio', color='tab:blue')
-	ax1.tick_params(axis='y', labelcolor='tab:blue')
-	ax1.plot(labels, winRatio, color='tab:blue')
+	ax1.set_ylabel('Normalized Win Ratio', color='seagreen')
+	ax1.tick_params(axis='y', labelcolor='seagreen')
+	ax1.plot(labels, winRatio, color='seagreen')
 	ax2 = ax1.twinx()
-	ax2.set_ylabel('Avg Cumulative Character Stats', color='tab:red')
+	ax2.set_ylabel('Avg Cumulative Character Stats', color='purple')
 
-	ax2.bar(ind-BAR_WIDTH/2, heroStats, width=BAR_WIDTH, color='firebrick', label='Protagonists')
-	ax2.bar(ind+BAR_WIDTH/2, foeStats, width=BAR_WIDTH, color='tomato', label="Foes")
-	ax2.tick_params(axis='y', labelcolor='tab:red')
+	ax2.bar(ind-BAR_WIDTH/2, heroStats, width=BAR_WIDTH, color='rebeccapurple', label='Protagonists')
+	ax2.bar(ind+BAR_WIDTH/2, foeStats, width=BAR_WIDTH, color='fuchsia', label="Foes")
+	ax2.tick_params(axis='y', labelcolor='purple')
 	#fig.tight_layout()  # otherwise the right y-label is slightly clipped
 	ax1.set_zorder(ax2.get_zorder()+1)
 	legend = ax2.legend(bbox_to_anchor=(1.08,1), borderaxespad=0)

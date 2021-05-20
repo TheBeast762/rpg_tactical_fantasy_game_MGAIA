@@ -1,111 +1,115 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><chrisemon>
-        <name> chrisemon </name>
-        <class> warrior </class>
-        <race> centaur </race>
+<characters><jist>
+        <name> jist </name>
+        <class> innkeeper </class>
+        <race> human </race>
         <level> 0 </level>
-        <strength>12</strength>
-        <defense>11</defense>
+        <strength>11</strength>
+        <defense>9</defense>
         <resistance>2</resistance>
-        <hp>22</hp>
-        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
+        <hp>19</hp>
+        <sprite> characs/jist.bmp </sprite>
         <equipment>
-            <body>
-                barding_magenta
-            </body>
+            <head>
+                helmet
+            </head>
             <right_hand>
                 club
+            </right_hand>
+        </equipment>
+        <interaction>
+            <talk>
+                Hurry up ! Leave the village from the west, and enter the necropolis.
+            </talk>
+            <talk>
+                The clock is ticking... The ogre's bones must be returned to their original place.
+            </talk>
+        </interaction>
+        <inventory>
+        </inventory>
+        <gold> 220 </gold>
+        <strategy> ACTIVE </strategy>
+        <attack_kind> PHYSICAL </attack_kind>
+    </jist>
+    <novius>
+        <name> novius </name>
+        <class> ranger </class>
+        <race> human </race>
+        <level> 0 </level>
+        <strength>12</strength>
+        <defense>8</defense>
+        <resistance>9</resistance>
+        <hp>15</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <equipment>
+            <head>
+                plumed_helmet
+            </head>
+            <body>
+                leather_armor
+            </body>
+            <right_hand>
+                basic_bow
+            </right_hand>
+            <feet>
+                brown_boots
+            </feet>
+        </equipment>
+        <gold> 100 </gold>
+        <inventory>
+        </inventory>
+        <strategy> ACTIVE </strategy>
+    </novius>
+    <sheedra>
+        <name> sheedra </name>
+        <class> ranger </class>
+        <race> centaur </race>
+        <level> 0 </level>
+        <strength>11</strength>
+        <defense>11</defense>
+        <resistance>2</resistance>
+        <hp>25</hp>
+        <sprite> dungeon_crawl/player/base/centaur_brown_female.bmp </sprite>
+        <equipment>
+            <head>
+                helmet
+            </head>
+            <body>
+                leather_armor
+            </body>
+            <right_hand>
+                basic_bow
             </right_hand>
         </equipment>
         <inventory>
         </inventory>
         <gold> 500 </gold>
         <strategy>ACTIVE</strategy>
-    </chrisemon>
-    <roama>
-        <name> roama </name>
-        <class> ranger </class>
-        <race> gnome </race>
-        <strength>12</strength>
-        <defense>12</defense>
-        <resistance>3</resistance>
-        <hp>24</hp>
-        <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
-        <equipment>
-            <head>
-                plumed_helmet
-            </head>
-            <body>
-                leather_armor
-            </body>
-            <right_hand>
-                basic_bow
-            </right_hand>
-            <feet>
-                black_boots
-            </feet>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 200 </gold>
-        <strategy>ACTIVE</strategy>
-    </roama>
-    <ilyon>
-        <name> ilyon </name>
+    </sheedra>
+    <hallas>
+        <name> hallas </name>
         <class> innkeeper </class>
-        <race> elf </race>
+        <race> centaur </race>
         <level> 0 </level>
-        <strength>11</strength>
-        <defense>9</defense>
+        <strength>13</strength>
+        <defense>11</defense>
         <resistance>2</resistance>
-        <hp>18</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
-        <equipment>
-            <right_hand>
-                club
-            </right_hand>
-            <body>
-                leather_armor
-            </body>
-            <feet>
-                brown_boots
-            </feet>
-        </equipment>
-        <gold> 220 </gold>
-        <inventory>
-        </inventory>
-        <strategy> ACTIVE </strategy>
-    </ilyon>
-    <braern>
-        <name> braern </name>
-        <class> ranger </class>
-        <race> elf </race>
-        <level> 0 </level>
-        <strength>9</strength>
-        <defense>10</defense>
-        <resistance>2</resistance>
-        <hp>27</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
+        <hp>21</hp>
+        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
         <equipment>
             <head>
-                plumed_helmet
+                helmet
             </head>
             <body>
                 leather_armor
             </body>
             <right_hand>
-                basic_bow
+                pickaxe
             </right_hand>
-            <feet>
-                brown_boots
-            </feet>
         </equipment>
         <inventory>
         </inventory>
-        <gold> 350 </gold>
+        <gold> 500 </gold>
         <strategy>ACTIVE</strategy>
-    </braern>
+    </hallas>
     </characters>

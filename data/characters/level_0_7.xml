@@ -1,72 +1,43 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><raimund>
-        <name> raimund </name>
+<characters><krado>
+        <name> krado </name>
         <class> warrior </class>
-        <race> human </race>
-        <level> 0 </level>
-        <strength>13</strength>
+        <race> gnome </race>
+        <strength>11</strength>
         <defense>9</defense>
-        <resistance>5</resistance>
-        <hp>27</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <resistance>2</resistance>
+        <hp>22</hp>
+        <level> 0 </level>
+        <sprite> dungeon_crawl/player/base/gnome_male.bmp </sprite>
         <equipment>
             <head>
                 helmet
             </head>
+            <body>
+                leather_armor
+            </body>
             <right_hand>
                 halberd
             </right_hand>
-            <body>
-                leather_armor
-            </body>
             <feet>
-                brown_boots
+                black_boots
             </feet>
         </equipment>
         <inventory>
         </inventory>
-        <gold> 350 </gold>
+        <gold> 200 </gold>
         <strategy>ACTIVE</strategy>
-    </raimund>
-    <lyka>
-        <name> lyka </name>
-        <class> warrior </class>
-        <race> elf </race>
-        <level> 0 </level>
-        <strength>18</strength>
-        <defense>7</defense>
-        <resistance>5</resistance>
-        <hp>27</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
-        <equipment>
-            <head>
-                plumed_helmet
-            </head>
-            <right_hand>
-                club
-            </right_hand>
-            <body>
-                leather_armor
-            </body>
-            <feet>
-                brown_boots
-            </feet>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 350 </gold>
-        <strategy>ACTIVE</strategy>
-    </lyka>
-    <roama>
-        <name> roama </name>
+    </krado>
+    <novius>
+        <name> novius </name>
         <class> ranger </class>
-        <race> gnome </race>
-        <strength>11</strength>
-        <defense>11</defense>
-        <resistance>2</resistance>
-        <hp>21</hp>
+        <race> human </race>
         <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
+        <strength>11</strength>
+        <defense>8</defense>
+        <resistance>9</resistance>
+        <hp>15</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
                 plumed_helmet
@@ -78,12 +49,71 @@
                 basic_bow
             </right_hand>
             <feet>
-                black_boots
+                brown_boots
             </feet>
         </equipment>
+        <gold> 100 </gold>
         <inventory>
         </inventory>
-        <gold> 200 </gold>
-        <strategy>ACTIVE</strategy>
-    </roama>
+        <strategy> ACTIVE </strategy>
+    </novius>
+    <ilyon>
+        <name> ilyon </name>
+        <class> innkeeper </class>
+        <race> elf </race>
+        <level> 0 </level>
+        <strength>11</strength>
+        <defense>9</defense>
+        <resistance>1</resistance>
+        <hp>16</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
+        <equipment>
+            <right_hand>
+                club
+            </right_hand>
+            <body>
+                leather_armor
+            </body>
+            <feet>
+                brown_boots
+            </feet>
+        </equipment>
+        <gold> 220 </gold>
+        <inventory>
+        </inventory>
+        <strategy> ACTIVE </strategy>
+    </ilyon>
+    <jist>
+        <name> jist </name>
+        <class> innkeeper </class>
+        <race> human </race>
+        <level> 0 </level>
+        <strength>11</strength>
+        <defense>9</defense>
+        <resistance>2</resistance>
+        <hp>18</hp>
+        <sprite> characs/jist.bmp </sprite>
+        <equipment>
+            <head>
+                helmet
+            </head>
+            <right_hand>
+                club
+            </right_hand>
+        </equipment>
+        <interaction>
+            <talk>
+                Hurry up ! Leave the village from the west, and enter the necropolis.
+            </talk>
+            <talk>
+                The clock is ticking... The ogre's bones must be returned to their original place.
+            </talk>
+        </interaction>
+        <inventory>
+        </inventory>
+        <gold> 220 </gold>
+        <strategy> ACTIVE </strategy>
+        <attack_kind> PHYSICAL </attack_kind>
+    </jist>
     </characters>

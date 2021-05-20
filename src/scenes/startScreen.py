@@ -80,13 +80,15 @@ class StartScreen:
             if status is LevelStatus.ENDED_VICTORY and (self.level_id + 1) in self.levels:
                 print("Level ", str(self.level_id)," WON!")
                 self.level_id += 1
-                team = self.level.passed_players + self.level.players
-                for player in team:
+                #team = self.level.passed_players + self.level.players
+                print("Players that died: ", [player.name for player in self.level.passed_players])
+                print("Players that lived: ", [player.name for player in self.level.players])
+                #for player in team:
                     # Players are fully restored between level
-                    player.healed(player.hp_max)
+                    #player.healed(player.hp_max)
                     # Reset player's state
-                    player.new_turn()
-                self.play(StartScreen.load_level(self.level_id, team, self.experiment))
+                    #player.new_turn()
+                self.play(StartScreen.load_level(self.level_id, [], self.experiment))
             elif status is LevelStatus.ENDED_VICTORY or status is LevelStatus.ENDED_DEFEAT:
                 # TODO: Game win dialog?
                 self.screen = pg.display.set_mode((MAIN_WIN_WIDTH, MAIN_WIN_HEIGHT))

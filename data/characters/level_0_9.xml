@@ -1,18 +1,45 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><lyka>
-        <name> lyka </name>
-        <class> warrior </class>
-        <race> elf </race>
+<characters><novius>
+        <name> novius </name>
+        <class> ranger </class>
+        <race> human </race>
         <level> 0 </level>
-        <strength>16</strength>
-        <defense>8</defense>
-        <resistance>4</resistance>
-        <hp>24</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
+        <strength>10</strength>
+        <defense>7</defense>
+        <resistance>8</resistance>
+        <hp>14</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
                 plumed_helmet
             </head>
+            <body>
+                leather_armor
+            </body>
+            <right_hand>
+                basic_bow
+            </right_hand>
+            <feet>
+                brown_boots
+            </feet>
+        </equipment>
+        <gold> 100 </gold>
+        <inventory>
+        </inventory>
+        <strategy> ACTIVE </strategy>
+    </novius>
+    <ilyon>
+        <name> ilyon </name>
+        <class> innkeeper </class>
+        <race> elf </race>
+        <level> 0 </level>
+        <strength>11</strength>
+        <defense>8</defense>
+        <resistance>2</resistance>
+        <hp>17</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
+        <equipment>
             <right_hand>
                 club
             </right_hand>
@@ -23,50 +50,53 @@
                 brown_boots
             </feet>
         </equipment>
+        <gold> 220 </gold>
         <inventory>
         </inventory>
-        <gold> 350 </gold>
-        <strategy>ACTIVE</strategy>
-    </lyka>
-    <euris>
-        <name> euris </name>
-        <class> spy </class>
-        <race> elf </race>
+        <strategy> ACTIVE </strategy>
+    </ilyon>
+    <jist>
+        <name> jist </name>
+        <class> innkeeper </class>
+        <race> human </race>
         <level> 0 </level>
-        <strength>11</strength>
-        <defense>11</defense>
-        <resistance>4</resistance>
-        <hp>26</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <strength>10</strength>
+        <defense>8</defense>
+        <resistance>2</resistance>
+        <hp>17</hp>
+        <sprite> characs/jist.bmp </sprite>
         <equipment>
             <head>
-                black_hood
+                helmet
             </head>
             <right_hand>
-                dagger
+                club
             </right_hand>
-            <body>
-                leather_armor
-            </body>
-            <feet>
-                black_boots
-            </feet>
         </equipment>
+        <interaction>
+            <talk>
+                Hurry up ! Leave the village from the west, and enter the necropolis.
+            </talk>
+            <talk>
+                The clock is ticking... The ogre's bones must be returned to their original place.
+            </talk>
+        </interaction>
         <inventory>
         </inventory>
-        <gold> 350 </gold>
-        <strategy>ACTIVE</strategy>
-    </euris>
-    <krado>
-        <name> krado </name>
-        <class> warrior </class>
-        <race> gnome </race>
-        <strength>11</strength>
-        <defense>7</defense>
-        <resistance>2</resistance>
-        <hp>21</hp>
+        <gold> 220 </gold>
+        <strategy> ACTIVE </strategy>
+        <attack_kind> PHYSICAL </attack_kind>
+    </jist>
+    <hallas>
+        <name> hallas </name>
+        <class> innkeeper </class>
+        <race> centaur </race>
         <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_male.bmp </sprite>
+        <strength>13</strength>
+        <defense>10</defense>
+        <resistance>2</resistance>
+        <hp>20</hp>
+        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
         <equipment>
             <head>
                 helmet
@@ -75,15 +105,12 @@
                 leather_armor
             </body>
             <right_hand>
-                halberd
+                pickaxe
             </right_hand>
-            <feet>
-                black_boots
-            </feet>
         </equipment>
         <inventory>
         </inventory>
-        <gold> 200 </gold>
+        <gold> 500 </gold>
         <strategy>ACTIVE</strategy>
-    </krado>
+    </hallas>
     </characters>
