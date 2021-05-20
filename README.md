@@ -1,27 +1,9 @@
 # RPG Tactical Fantasy Game
 
-__WARNING__ : This game is entirely under construction.
+__WARNING__ : GRIMMY/Original Author: "This game is entirely under construction."
 
 The game is an RPG Tactical Fantasy game, turn-based and is in 2D.
 I'm currently looking for a good name.
-
-## How to help development
-
-You can submit any request you want, or notify me about any bug you encountered, by sending an e-mail to grimmys.programming@gmail.com or by opening an issue.
-
-Please, don't hesitate about suggesting ideas : it's my first " serious " game project. ;)
-
-* Help with balancing would be greatly appreciated... I'm not really good in this kind of games even if I love them !
-  All values could be found in the XML files wrapped in the data folder.
-* Since I'm not a designer, some elements may be oddly placed in the UI. You can try to correct the ones you see or simply notify me.
-* Contributions for sound effects / soundtracks would be really appreciated !
-* Ideas about future levels could be submitted, however, I'm currently working on a scenario.
-
-__Version__ : 1.0.4
-
-![Main screen with possible moves and attack](/screenshots/player_moves_and_attacks.bmp?raw=True)
-![Inventory menu](/screenshots/inventory_screen.bmp?raw=True)
-![Status window](/screenshots/status_screen.bmp?raw=True)
 
 ## How to start the game
 
@@ -29,7 +11,10 @@ If you are using 64-bit Windows you can head over to the [releases page](https:/
 
 If you would rather run directly from the source \(or want to develop the game\), make sure to have [Python](https://python.org) installed and run `python -m pip install -r requirements.txt` in the repository folder.
 
-Then you can run `python main.py` to start the game.
+DISCLAIMER: Damian Domela: "Sounds were disabled and images were converted to .bmp to increase the project its adaptability towards different versions of PyGame/OS.
+The current version of PyGame mentioned in requirements.txt is what worked for my MacBook Air, if you're having trouble with installation, try adapting the PyGame version to what better suits your OS."
+
+Then you can run `python3 main.py` to start the game.
 
 ## Keys
 
