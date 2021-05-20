@@ -17,7 +17,9 @@ The current version of PyGame mentioned in requirements.txt is what worked for m
 Then you can run `python3 main.py` to start the game, playing as the protagonists.
 
 Damian Domela: "You can adjust the difficulty setting in the options menu, if you want to run a Protagonist Agent VS. Foe Agent experiment, run the following:
+
 python3 main.py -experiment {amount of iterations per difficulty} -monitor
+
 (-monitor allows you to watch the experiment, omitting this parameter runs without visuals, but PyGame is prone to crashing in this mode)"
 
 ## Keys
