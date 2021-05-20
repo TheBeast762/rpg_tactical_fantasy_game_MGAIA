@@ -1,33 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><krado>
-        <name> krado </name>
-        <class> warrior </class>
-        <race> gnome </race>
-        <strength>12</strength>
-        <defense>9</defense>
-        <resistance>3</resistance>
-        <hp>23</hp>
+<characters><novius>
+        <name> novius </name>
+        <class> ranger </class>
+        <race> human </race>
         <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_male.bmp </sprite>
+        <strength>11</strength>
+        <defense>8</defense>
+        <resistance>9</resistance>
+        <hp>15</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
-                helmet
+                plumed_helmet
             </head>
             <body>
                 leather_armor
             </body>
             <right_hand>
-                halberd
+                basic_bow
             </right_hand>
             <feet>
-                black_boots
+                brown_boots
             </feet>
         </equipment>
+        <gold> 100 </gold>
         <inventory>
         </inventory>
-        <gold> 200 </gold>
-        <strategy>ACTIVE</strategy>
-    </krado>
+        <strategy> ACTIVE </strategy>
+    </novius>
     <jist>
         <name> jist </name>
         <class> innkeeper </class>
@@ -87,30 +87,30 @@
         </inventory>
         <strategy> ACTIVE </strategy>
     </ilyon>
-    <emera>
-        <name> emera </name>
+    <hallas>
+        <name> hallas </name>
         <class> innkeeper </class>
-        <race> gnome </race>
-        <strength>11</strength>
-        <defense>8</defense>
-        <resistance>3</resistance>
-        <hp>22</hp>
+        <race> centaur </race>
         <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
+        <strength>13</strength>
+        <defense>11</defense>
+        <resistance>2</resistance>
+        <hp>20</hp>
+        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
         <equipment>
+            <head>
+                helmet
+            </head>
             <body>
                 leather_armor
             </body>
             <right_hand>
-                halberd
+                pickaxe
             </right_hand>
-            <feet>
-                black_boots
-            </feet>
         </equipment>
         <inventory>
         </inventory>
-        <gold> 200 </gold>
+        <gold> 500 </gold>
         <strategy>ACTIVE</strategy>
-    </emera>
+    </hallas>
     </characters>

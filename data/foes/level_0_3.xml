@@ -1,40 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<foes><snake>
-    <name>snake</name>
-    <sprite>
-            animals/adder.bmp
-        </sprite>
-    <move>
-            3
-        </move>
-    <hp>18</hp>
-    <strength>15</strength>
-    <defense>9</defense>
-    <resistance>3</resistance>
-    <xp_gain>2</xp_gain>
-    <strategy>
-            SEMI_ACTIVE
-        </strategy>
-    <attack_kind>
-            PHYSICAL
-        </attack_kind>
-    <stats_up>
-      <hp>
-                1, 2, 2, 2, 3, 4
-            </hp>
-      <strength>
-                0, 1, 1
-            </strength>
-      <defense>
-                0, 1, 1
-            </defense>
-      <resistance>
-                0, 1
-            </resistance>
-    </stats_up>
-    <loot />
-  </snake>
-  <mutanter_cultist>
+<foes><mutanter_cultist>
     <name>mutanter_cultist</name>
     <sprite>
             thugs/mutanter_cultist.bmp
@@ -42,7 +7,7 @@
     <move>
             3
         </move>
-    <hp>17</hp>
+    <hp>18</hp>
     <strength>15</strength>
     <defense>8</defense>
     <resistance>4</resistance>
@@ -85,9 +50,9 @@
     <move>
             5
         </move>
-    <hp>17</hp>
-    <strength>17</strength>
-    <defense>11</defense>
+    <hp>16</hp>
+    <strength>18</strength>
+    <defense>13</defense>
     <resistance>4</resistance>
     <xp_gain>1</xp_gain>
     <attack_kind>
@@ -119,10 +84,10 @@
     <move>
             0
         </move>
-    <hp>15</hp>
+    <hp>16</hp>
     <strength>16</strength>
-    <defense>12</defense>
-    <resistance>1</resistance>
+    <defense>13</defense>
+    <resistance>0</resistance>
     <xp_gain>2</xp_gain>
     <strategy>
             STATIC
@@ -145,16 +110,16 @@
             </resistance>
     </stats_up>
   </simple_statue>
-  <mutant_lizard>
-    <name>mutant_lizard</name>
+  <mutant_ant>
+    <name>mutant_ant</name>
     <sprite>
-            undead/simulacra/simulacrum_lizard.bmp
+            undead/simulacra/simulacrum_ant.bmp
         </sprite>
     <move>
-            6
+            7
         </move>
-    <hp>24</hp>
-    <strength>14</strength>
+    <hp>20</hp>
+    <strength>15</strength>
     <defense>10</defense>
     <resistance>3</resistance>
     <xp_gain>3</xp_gain>
@@ -166,10 +131,10 @@
         </attack_kind>
     <stats_up>
       <hp>
-                1, 2, 2, 2, 3, 4
+                1, 2, 2, 3, 3, 4
             </hp>
       <strength>
-                0, 1, 1, 1, 2
+                0, 1, 1, 1
             </strength>
       <defense>
                 0, 1, 1, 2
@@ -179,6 +144,59 @@
             </resistance>
     </stats_up>
     <loot />
-    <keywords>mutant,large,cavalry</keywords>
-  </mutant_lizard>
+    <keywords>mutant</keywords>
+  </mutant_ant>
+  <necrophage>
+    <name>necrophage</name>
+    <sprite>
+            undead/necrophage_new.bmp
+        </sprite>
+    <move>
+            2
+        </move>
+    <hp>21</hp>
+    <strength>18</strength>
+    <defense>11</defense>
+    <resistance>3</resistance>
+    <xp_gain>3</xp_gain>
+    <strategy>
+            SEMI_ACTIVE
+        </strategy>
+    <attack_kind>
+            PHYSICAL
+        </attack_kind>
+    <loot>
+      <item>
+        <name>
+                    monster_meat
+                </name>
+        <probability>
+                    0.2
+                </probability>
+      </item>
+      <item>
+        <name>
+                    iron_ring
+                </name>
+        <probability>
+                    0.15
+                </probability>
+      </item>
+    </loot>
+    <stats_up>
+      <hp>
+                2, 2, 3, 3, 4, 5
+            </hp>
+      <strength>
+                0, 1, 1, 2, 2
+            </strength>
+      <defense>
+                0, 1
+            </defense>
+      <resistance>
+                0, 1
+            </resistance>
+    </stats_up>
+    <keywords>UNDEAD,LARGE</keywords>
+  </necrophage>
   </foes>

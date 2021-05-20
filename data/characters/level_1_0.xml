@@ -1,56 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><doran>
-        <name> doran </name>
-        <class> spy </class>
-        <race> gnome </race>
-        <strength>9</strength>
-        <defense>9</defense>
-        <resistance>2</resistance>
-        <hp>19</hp>
+<characters><thokdrum>
+        <name> thokdrum </name>
+        <class> warrior </class>
+        <race> dwarf </race>
         <level> 0 </level>
-        <sprite> dungeon_crawl/player/base/gnome_male.bmp </sprite>
-        <equipment>
-            <head>
-                black_hood
-            </head>
-            <body>
-                spy_outfit
-            </body>
-            <right_hand>
-                dagger
-            </right_hand>
-            <feet>
-                black_boots
-            </feet>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 200 </gold>
-        <interaction>
-            <talk>
-                Thank you for rescuing me!
-            </talk>
-            <talk>
-                As I promised, I'll help you now! As a spy, I could open locked doors and chests.
-            </talk>
-            <join_team />
-        </interaction>
-        <strategy>ACTIVE</strategy>
-    </doran>
-<ilyon>
-        <name> ilyon </name>
-        <class> innkeeper </class>
-        <race> elf </race>
-        <level> 0 </level>
-        <strength>11</strength>
+        <strength>13</strength>
         <defense>8</defense>
         <resistance>2</resistance>
-        <hp>16</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
-        <equipment>
+        <hp>27</hp>
+        <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
+       <equipment>
+            <head>
+                horned_helmet
+            </head>
             <right_hand>
-                club
+                pickaxe
             </right_hand>
             <body>
                 leather_armor
@@ -59,47 +23,21 @@
                 brown_boots
             </feet>
         </equipment>
-        <gold> 220 </gold>
         <inventory>
         </inventory>
-        <strategy> ACTIVE </strategy>
-    </ilyon>
-    <emera>
-        <name> emera </name>
-        <class> innkeeper </class>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </thokdrum>
+    <roama>
+        <name> roama </name>
+        <class> ranger </class>
         <race> gnome </race>
         <strength>10</strength>
-        <defense>8</defense>
-        <resistance>2</resistance>
-        <hp>20</hp>
+        <defense>11</defense>
+        <resistance>3</resistance>
+        <hp>22</hp>
         <level> 0 </level>
         <sprite> dungeon_crawl/player/base/gnome_female.bmp </sprite>
-        <equipment>
-            <body>
-                leather_armor
-            </body>
-            <right_hand>
-                halberd
-            </right_hand>
-            <feet>
-                black_boots
-            </feet>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 200 </gold>
-        <strategy>ACTIVE</strategy>
-    </emera>
-    <novius>
-        <name> novius </name>
-        <class> ranger </class>
-        <race> human </race>
-        <level> 0 </level>
-        <strength>9</strength>
-        <defense>8</defense>
-        <resistance>9</resistance>
-        <hp>14</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
         <equipment>
             <head>
                 plumed_helmet
@@ -111,12 +49,41 @@
                 basic_bow
             </right_hand>
             <feet>
+                black_boots
+            </feet>
+        </equipment>
+        <inventory>
+        </inventory>
+        <gold> 200 </gold>
+        <strategy>ACTIVE</strategy>
+    </roama>
+    <lyka>
+        <name> lyka </name>
+        <class> warrior </class>
+        <race> elf </race>
+        <level> 0 </level>
+        <strength>18</strength>
+        <defense>8</defense>
+        <resistance>5</resistance>
+        <hp>27</hp>
+        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
+        <equipment>
+            <head>
+                plumed_helmet
+            </head>
+            <right_hand>
+                club
+            </right_hand>
+            <body>
+                leather_armor
+            </body>
+            <feet>
                 brown_boots
             </feet>
         </equipment>
-        <gold> 100 </gold>
         <inventory>
         </inventory>
-        <strategy> ACTIVE </strategy>
-    </novius>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </lyka>
     </characters>

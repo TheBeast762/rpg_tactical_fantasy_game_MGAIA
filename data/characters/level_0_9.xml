@@ -1,45 +1,76 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><novius>
-        <name> novius </name>
-        <class> ranger </class>
-        <race> human </race>
+<characters><darotha>
+        <name> darotha </name>
+        <class> innkeeper </class>
+        <race> dwarf </race>
         <level> 0 </level>
-        <strength>10</strength>
-        <defense>7</defense>
-        <resistance>8</resistance>
-        <hp>14</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <strength>12</strength>
+        <defense>11</defense>
+        <resistance>1</resistance>
+        <hp>24</hp>
+        <sprite> dungeon_crawl/player/base/dwarf_female.bmp </sprite>
+       <equipment>
+            <head>
+                horned_helmet
+            </head>
+            <right_hand>
+                pickaxe
+            </right_hand>
+            <body>
+                leather_armor
+            </body>
+            <feet>
+                brown_boots
+            </feet>
+        </equipment>
+        <inventory>
+        </inventory>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </darotha>
+    <thokdrum>
+        <name> thokdrum </name>
+        <class> warrior </class>
+        <race> dwarf </race>
+        <level> 0 </level>
+        <strength>12</strength>
+        <defense>8</defense>
+        <resistance>1</resistance>
+        <hp>29</hp>
+        <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
+       <equipment>
+            <head>
+                horned_helmet
+            </head>
+            <right_hand>
+                pickaxe
+            </right_hand>
+            <body>
+                leather_armor
+            </body>
+            <feet>
+                brown_boots
+            </feet>
+        </equipment>
+        <inventory>
+        </inventory>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </thokdrum>
+    <lyka>
+        <name> lyka </name>
+        <class> warrior </class>
+        <race> elf </race>
+        <level> 0 </level>
+        <strength>18</strength>
+        <defense>8</defense>
+        <resistance>5</resistance>
+        <hp>26</hp>
+        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
         <equipment>
             <head>
                 plumed_helmet
             </head>
-            <body>
-                leather_armor
-            </body>
-            <right_hand>
-                basic_bow
-            </right_hand>
-            <feet>
-                brown_boots
-            </feet>
-        </equipment>
-        <gold> 100 </gold>
-        <inventory>
-        </inventory>
-        <strategy> ACTIVE </strategy>
-    </novius>
-    <ilyon>
-        <name> ilyon </name>
-        <class> innkeeper </class>
-        <race> elf </race>
-        <level> 0 </level>
-        <strength>11</strength>
-        <defense>8</defense>
-        <resistance>2</resistance>
-        <hp>17</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
-        <equipment>
             <right_hand>
                 club
             </right_hand>
@@ -50,67 +81,9 @@
                 brown_boots
             </feet>
         </equipment>
-        <gold> 220 </gold>
         <inventory>
         </inventory>
-        <strategy> ACTIVE </strategy>
-    </ilyon>
-    <jist>
-        <name> jist </name>
-        <class> innkeeper </class>
-        <race> human </race>
-        <level> 0 </level>
-        <strength>10</strength>
-        <defense>8</defense>
-        <resistance>2</resistance>
-        <hp>17</hp>
-        <sprite> characs/jist.bmp </sprite>
-        <equipment>
-            <head>
-                helmet
-            </head>
-            <right_hand>
-                club
-            </right_hand>
-        </equipment>
-        <interaction>
-            <talk>
-                Hurry up ! Leave the village from the west, and enter the necropolis.
-            </talk>
-            <talk>
-                The clock is ticking... The ogre's bones must be returned to their original place.
-            </talk>
-        </interaction>
-        <inventory>
-        </inventory>
-        <gold> 220 </gold>
-        <strategy> ACTIVE </strategy>
-        <attack_kind> PHYSICAL </attack_kind>
-    </jist>
-    <hallas>
-        <name> hallas </name>
-        <class> innkeeper </class>
-        <race> centaur </race>
-        <level> 0 </level>
-        <strength>13</strength>
-        <defense>10</defense>
-        <resistance>2</resistance>
-        <hp>20</hp>
-        <sprite> dungeon_crawl/player/base/centaur_brown_male.bmp </sprite>
-        <equipment>
-            <head>
-                helmet
-            </head>
-            <body>
-                leather_armor
-            </body>
-            <right_hand>
-                pickaxe
-            </right_hand>
-        </equipment>
-        <inventory>
-        </inventory>
-        <gold> 500 </gold>
+        <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
-    </hallas>
+    </lyka>
     </characters>

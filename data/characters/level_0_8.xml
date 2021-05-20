@@ -1,18 +1,46 @@
 <?xml version='1.0' encoding='utf-8'?>
-<characters><lyka>
-        <name> lyka </name>
-        <class> warrior </class>
-        <race> elf </race>
+<characters><samora>
+        <name> samora </name>
+        <class> spy </class>
+        <race> human </race>
         <level> 0 </level>
-        <strength>18</strength>
-        <defense>7</defense>
-        <resistance>4</resistance>
-        <hp>25</hp>
+        <strength>9</strength>
+        <defense>8</defense>
+        <resistance>2</resistance>
+        <hp>24</hp>
         <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
+        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
         <equipment>
             <head>
-                plumed_helmet
+                black_hood
             </head>
+            <body>
+                spy_outfit
+            </body>
+            <right_hand>
+                dagger
+            </right_hand>
+            <feet>
+                black_boots
+            </feet>
+        </equipment>
+        <inventory>
+        </inventory>
+        <gold> 350 </gold>
+        <strategy>ACTIVE</strategy>
+    </samora>
+    <ilyon>
+        <name> ilyon </name>
+        <class> innkeeper </class>
+        <race> elf </race>
+        <level> 0 </level>
+        <strength>10</strength>
+        <defense>9</defense>
+        <resistance>1</resistance>
+        <hp>16</hp>
+        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
+        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
+        <equipment>
             <right_hand>
                 club
             </right_hand>
@@ -23,52 +51,54 @@
                 brown_boots
             </feet>
         </equipment>
+        <gold> 220 </gold>
         <inventory>
         </inventory>
-        <gold> 350 </gold>
-        <strategy>ACTIVE</strategy>
-    </lyka>
-    <braern>
-        <name> braern </name>
-        <class> ranger </class>
-        <race> elf </race>
+        <strategy> ACTIVE </strategy>
+    </ilyon>
+    <jist>
+        <name> jist </name>
+        <class> innkeeper </class>
+        <race> human </race>
         <level> 0 </level>
-        <strength>9</strength>
+        <strength>10</strength>
         <defense>9</defense>
-        <resistance>1</resistance>
-        <hp>25</hp>
-        <sprite> dungeon_crawl/player/base/human_female.bmp </sprite>
-        <complement_sprite> legs/pants_short_brown.bmp </complement_sprite>
+        <resistance>2</resistance>
+        <hp>18</hp>
+        <sprite> characs/jist.bmp </sprite>
         <equipment>
             <head>
-                plumed_helmet
+                helmet
             </head>
-            <body>
-                leather_armor
-            </body>
             <right_hand>
-                basic_bow
+                club
             </right_hand>
-            <feet>
-                brown_boots
-            </feet>
         </equipment>
+        <interaction>
+            <talk>
+                Hurry up ! Leave the village from the west, and enter the necropolis.
+            </talk>
+            <talk>
+                The clock is ticking... The ogre's bones must be returned to their original place.
+            </talk>
+        </interaction>
         <inventory>
         </inventory>
-        <gold> 350 </gold>
-        <strategy>ACTIVE</strategy>
-    </braern>
-    <euris>
-        <name> euris </name>
+        <gold> 220 </gold>
+        <strategy> ACTIVE </strategy>
+        <attack_kind> PHYSICAL </attack_kind>
+    </jist>
+    <kselia>
+        <name> kselia </name>
         <class> spy </class>
-        <race> elf </race>
+        <race> dwarf </race>
         <level> 0 </level>
-        <strength>11</strength>
-        <defense>10</defense>
-        <resistance>4</resistance>
-        <hp>26</hp>
-        <sprite> dungeon_crawl/player/base/human_male.bmp </sprite>
-        <equipment>
+        <strength>10</strength>
+        <defense>8</defense>
+        <resistance>1</resistance>
+        <hp>22</hp>
+        <sprite> dungeon_crawl/player/base/dwarf_male.bmp </sprite>
+       <equipment>
             <head>
                 black_hood
             </head>
@@ -86,5 +116,5 @@
         </inventory>
         <gold> 350 </gold>
         <strategy>ACTIVE</strategy>
-    </euris>
+    </kselia>
     </characters>
