@@ -515,7 +515,7 @@ def generateMaps(experimentGame):
 		if difficulty >= diff:
 			nLevels = N_LEVELS[diff]
 	for level in range(nLevels):
-		theme = 'city'#random.choice(THEMES[level])
+		theme = random.choice(THEMES[level])
 		obstacles = []
 		if theme == "autumn":
 			image, grassTexts, _ = placeGrassFloor(width, height, "grass0")
